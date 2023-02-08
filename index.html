@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" http-equiv="Content-Type" content="width=device-width">
+        <title>MOKEPON!</title>
+        <link rel="stylesheet" href="mokepon.css">
+    </head>
+    <body>
+        <img id="fondo" src="img/paldea.jpg">
+        <section id="logo">
+            <img src="img/logo.png" alt="Logo mokepon">
+        </section>
+        <section id="seleccionar-mascota">
+            <div>
+                <h2>Elige tu mascota:</h2>
+                <ul id="numero-mokepon" style="list-style: none;">
+                </ul>
+            </div>
+        </section>
+        <section id="seleccionar">
+            <button id="btnseleccion-mascota">Seleccionar</button>
+        </section>
+        <!--SECTION PARA EL CANVAS-->
+        <section id="mapa-canvas">
+            <h2>Recorre el mapa con tu MOKEPON</h2>
+            <canvas id="mapa"></canvas>
+            <button class="boton-movimiento" id="boton-arriba" onmouseup="detenerMovimiento()" onpointerdown="moverImagenArriba()" onpointerdown="moverImagenArriba()"><img id="flecha-arriba" src="img/flecha.png"></button>
+            <div>
+                <button class="boton-movimiento" id="boton-izquierda" onmouseup="detenerMovimiento()" onpointerdown="moverImagenIzquierda()"><img id="flecha-izquierda" src="img/flecha.png"></button>
+                <button class="boton-movimiento" id="boton-abajo" onmouseup="detenerMovimiento()" onpointerdown="moverImagenAbajo()"><img id="flecha-abajo" src="img/flecha.png"></button>
+                <button class="boton-movimiento" id="boton-derecha" onmouseup="detenerMovimiento()" onpointerdown="moverImagenDerecha()"><img id="flecha-derecha" src="img/flecha.png"></button>
+            </div>
+        </section>
+        <!---------------------------------->
+        <section id="seleccionar-ataque">
+            <div>
+                <h2>Elige tu ataque:</h2>
+                <div id="botones-ataque" class="botones-ataque">
+                </div>
+            </div>
+        </section>
+        <section id="mensajes">
+            <!--<p>Tu mascota atacó con <span id="tipo-ataque-jugador"></span>, la mascota del enemigo atacó con <span id="tipo-ataque-enemigo"></span> - GANASTE 🎉</p>-->
+        </section>
+        <section id="reiniciar">
+            <button id="button-reload">Reiniciar</button>
+            <div id="info-mascotas">
+                <p id="resumen-jugador">
+                    <span id="mascota-elegida"></span>
+                    <span id="life-player">0</span>
+                    <span>💗</span>
+                </p>
+                <p id="resumen-enemigo">
+                    <span id="mascota-enemy"></span>
+                    <span id="life-enemy">0</span>
+                    <span>💗</span>
+                </p>
+            </div>
+        </section>
+        <script src="mokeponnode.js"></script>
+    </body>
+</html>

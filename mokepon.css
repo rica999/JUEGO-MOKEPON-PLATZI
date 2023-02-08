@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&family=Oregano&display=swap');
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+#fondo{
+    position: absolute;/*el abosulute debe ir primero que los relative*/
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+#logo{
+    position: relative;
+    text-align: center;
+    margin: 20px;
+}
+#logo img{
+    width: 200px;
+    height: auto;
+}
+#seleccionar-mascota{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#seleccionar-mascota div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border-radius: 30px;
+    background-color: aqua;
+}
+input{
+    display: none;
+}
+ul{
+    display: flex;
+    gap: 10px;/*separa hijos*/
+    padding: 0;
+}
+ul li{
+    display: flex;
+    background-color: blueviolet;
+    flex-direction: column;
+    align-items: center;
+}
+ul li label{
+    color: white;
+    margin: 5px;
+}
+ul li input:checked + label{
+    background-color: red;
+}
+#btnseleccion-mascota{
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'Oregano', cursive;
+    font-weight: bold;
+    background: transparent;
+}
+#seleccionar-ataque{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#seleccionar-ataque div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border-radius: 30px;
+    background-color: aqua;
+    padding: 10px;
+}
+#seleccionar-ataque div .botones-ataque{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:20px;
+}
+#boton-fire,#boton-water,#boton-terra{
+    border-radius: 20px;
+    border-color: gray;
+    padding: 10px;
+    font-family: 'Oregano', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+#boton-fire{
+    background-color: rgb(231, 130, 130);
+}
+#boton-water{
+    background-color: rgb(149, 215, 219);
+}
+#boton-terra{
+    background-color: rgb(130, 231, 169);
+}
+#mensajes{
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#mensajes p{
+    padding: 10px;
+    background-color: aliceblue;
+}
+#seleccionar{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+}
+#reiniciar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 5px;
+}
+#button-reload,#btnseleccion-mascota{
+    padding: 10px;
+    border-color: tomato;
+    font-size: 25px;
+    font-family: 'Oregano', cursive;
+    font-weight: bold;
+    background: transparent;
+}
+#reiniciar div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#reiniciar div p{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+/*CANVAS*/
+#mapa-canvas{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#mapa{
+    border: 2px solid black;
+}
+.boton-movimiento{
+    background: transparent;
+    border: none;
+}
+#flecha-arriba{
+    width: 50px;
+    transform: rotate(270deg);
+}
+#flecha-derecha{
+    width: 50px;
+}
+#flecha-abajo{
+    width: 50px;
+    transform: rotate(90deg);
+}
+#flecha-izquierda{
+    width: 50px;
+    transform: rotate(180deg);
+}
+/*MEDIA QUERYS PARA RESPONSIVE DESIGN*/
+@media (max-width: 360px) {
+    body{
+        font-size: 10px;
+    }
+    #logo img{
+        width: 50%;
+    }
+    h2{
+        margin: 0;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;/*separa hijos*/
+        padding: 0;
+    }
+    ul li img{
+        width: 70%;
+    }
+    #seleccionar-mascota div{
+        width: 50%;
+        border-radius: 30px;
+        background-color: aqua;
+        padding: 10px;
+    }
+    #seleccionar{
+        margin: 0;
+    }
+    #button-reload,#btnseleccion-mascota{
+        padding: 10px;
+        font-size: 15px;
+        margin: 25px;
+    }
+    #mensajes{
+        padding: 0;
+    }
+    #seleccionar-ataque div .botones-ataque{
+        flex-direction: column;
+        gap: 10px;
+    }
+    #button-fire,#button-water,#button-terra{
+        font-size: 10px;
+        padding: 0 10px;
+    }
+    #button-reload{
+        margin: 0;
+    }
+}
